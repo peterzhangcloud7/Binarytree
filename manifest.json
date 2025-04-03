@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "二叉树层级解析",
+    "version": "1.0",
+    "description": "解析网页中的层级数据并生成二叉树",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "tabs",
+        "storage"
+      ],
+    "action": {
+        "default_icon": "icon.png",
+        "default_title": "二叉树层级解析"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"],
+            "run_at": "document_idle"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["popup.html", "lib/*"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}

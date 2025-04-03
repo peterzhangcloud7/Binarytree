@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二叉树层级解析</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="toolbar">
+        <div class="search-group">
+            <input type="text" id="searchInput" placeholder="输入账号搜索">
+            <button id="searchBtn" class="btn-primary">搜索</button>
+            <button id="toggleViewBtn" class="btn-secondary">显示全部层级</button>
+        </div>
+        <div id="statusBar"></div>
+        <div id="progressContainer" style="display:none; margin-top:10px;">
+            <div id="progressText" style="font-size:0.8em; margin-bottom:5px;">加载中: 0%</div>
+            <div style="height:4px; background:#eee; border-radius:2px;">
+                <div id="progressBar" style="height:100%; width:0%; background:#3498db; border-radius:2px; transition:width 0.3s;"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="treeContainer"></div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
